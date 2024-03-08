@@ -1,4 +1,5 @@
 <?php
+namespace MiladHspr\Analyzer;
 
 class PerformanceAnalyzer
 {
