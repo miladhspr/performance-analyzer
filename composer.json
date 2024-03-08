@@ -1,0 +1,15 @@
+{
+  "name": "miladhspr/performance-analyzer",
+  "description": "A Test PHP class to measure the execution time of code segments.",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "miladhspr",
+      "email": "miladclick@gmail.com"
+    }
+  ],
+  "require": {
+  }
+}
