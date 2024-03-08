@@ -1,14 +1,15 @@
 <?php
+
 namespace MiladHspr\Analyzer;
 
 class PerformanceAnalyzer
 {
     private static $startTime;
 
-    public static function displayRuntime($endTime, $startTime): void
+    private static function displayRuntime($endTime, $startTime): string
     {
         $formattedRuntime = self::calculateRuntime($endTime, $startTime);
-        self::renderRuntime($formattedRuntime);
+        return self::renderRuntime($formattedRuntime);
     }
 
     public static function startTimer(): void
@@ -16,22 +17,22 @@ class PerformanceAnalyzer
         self::$startTime = microtime(true);
     }
 
-    public static function endTimer(): void
+    public static function endTimer(): string
     {
         $endTime = microtime(true);
-        self::displayRuntime($endTime, self::$startTime);
+        return self::displayRuntime($endTime, self::$startTime);
     }
 
-    public static function measureExecutionTime(callable $callback): void
+    public static function measureExecutionTime(callable $callback): string
     {
         self::startTimer();
         $callback();
-        self::endTimer();
+        return self::endTimer();
     }
 
-    private static function renderRuntime(string $formattedRuntime): void
+    private static function renderRuntime(string $formattedRuntime): string
     {
-        echo "Execution time: $formattedRuntime\n";
+        return $formattedRuntime;
     }
 
     private static function calculateRuntime($endTime, $startTime): string

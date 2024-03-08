@@ -3,7 +3,7 @@
   "description": "A Test PHP class to measure the execution time of code segments.",
   "type": "library",
   "license": "MIT",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "miladhspr",
